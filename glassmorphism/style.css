@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(nature-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.glass-container{
+    border-top: 1px solid rgba(225, 225, 225, 0.506);
+    border-left: 1px solid rgba(225, 225, 225, 0.506);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.506);
+    border-right: 1px solid rgba(0, 0, 0, 0.506);
+    width: min(550px, 80%);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(44, 121, 184, 0.159);
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 3px 4px 4px rgba(0,0,0,0.1);
+}
+
+.glass-container h1, p{
+    font-style: italic;
+    font-weight: 550px;
+    color: rgb(255, 255, 255);
+    text-align:justify;
+}
+
+.glass-container h1{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+   

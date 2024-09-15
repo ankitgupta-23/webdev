@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: rgb(27, 27, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+   
+}
+
+.box{
+    
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    /* background: rgba(103, 103, 110, 0.5); */
+    background: rgb(48, 48, 58);
+    position: relative;
+    
+
+}
+
+.box>h1, p{
+    color: aliceblue;
+    text-align: center;
+    padding: 2px;
+
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.box::after, .glass-box::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 10px;
+   
+    padding: 3px;
+    background-image: conic-gradient(from var(--angle), blue,yellow ,red, rgb(87, 255, 87), rgb(255, 129, 255), rgb(236, 145, 41), rgb(249, 91, 223), blue);
+
+    animation: spin 3s infinite ease-in;
+}
+
+
+
+.box::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+
+    to{
+        --angle:360deg;
+    }
+}
