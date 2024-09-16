@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(183, 182, 182);
+}
+
+.box{
+    height: 50px;
+    width: 100px;
+    /* border: 1px solid grey; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(183, 182, 182);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 
+    3px 2px 2px 2px rgb(167, 166, 166),
+    -3px -2px 2px 2px rgb(219, 216, 216)
+    ;
+
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.box:hover{
+    color: rgb(249, 248, 248);
+}
